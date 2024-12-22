@@ -1,2 +1,2 @@
 # odin_front_end
-description
+some text written on github.com
