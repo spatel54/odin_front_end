@@ -1,0 +1,166 @@
+/*  Basic Syntax 
+div.bold-text (selector) { 
+    font-weight: (property) 700 (value);
+}
+*/
+
+/* Selectors */
+
+/* Universal selector - every element has purple */
+* {
+  color: purple;
+}
+
+/* Type selectors */
+/* Selectors all elements of given element type, syntax is just name of element */
+/* index.html --> */
+
+/* <div>Hello, World!</div>
+<div>Hello again!</div>
+<p>Hi...</p> (NOT SELECTED)
+<div>Okay, bye.</div> */
+
+div {
+  color: white;
+}
+
+/* <div class="alert-text">Please agree to our terms of service.</div> */
+
+.alert-text {
+  color: red;
+}
+
+/* Can use same class on many elements */
+
+/* ID selectors */
+/* ID is another attribute. Only ONED ID per element. */
+/* Use them sparingly. */
+
+/* html */
+/* <div id="title">My Awesome 90's Page</div> */
+
+#title {
+  background-color: red;
+}
+
+/* Grouping selectors */
+.read {
+  color: white;
+  background-color: black;
+  /* several unique declarations */
+}
+
+.unread {
+  color: white;
+  background-color: black;
+  /* several unique declarations */
+}
+
+/* This is where they are grouped. Improves readability and efficiency. */
+.read,
+.unread {
+  color: white;
+  background-color: black;
+}
+
+.read {
+  /* several unique declarations */
+}
+
+.unread {
+  /* several unique declarations */
+}
+
+/* Chaining selectors */
+/* html */
+/* <div>
+  <div class="subsection header">Latest Posts</div>
+  <p class="subsection preview">This is where a preview for a post might go.</p>
+</div>
+ */
+
+/* Apply separate rule to element that has header as second class. */
+
+.subsection.header {
+  color: red;
+}
+
+/* Chain class and ID together */
+/* <div>
+  <div class="subsection header">Latest Posts</div>
+  <p class="subsection" id="preview">
+    This is where a preview for a post might go.
+  </p>
+</div> */
+.subsection.header {
+  color: red;
+}
+
+.subsection#preview {
+  color: blue;
+}
+
+/* Cannot chain more than one type of selector since an element cannot be two types at once.
+  Ex: div and p. There is no divp element.  */
+
+/* Descendant combinator */
+/* Only elements that match last selector are selected if they also have an ancestor that matches previous selector. */
+/* Ex. .ancestor .child Select element with class child if ancestor has class ancestor. */
+
+/* <!-- index.html -->
+
+<div class="ancestor">
+  <!-- A -->
+  <div class="contents">
+    <!-- B -->
+    <div class="contents"><!-- C --></div>
+  </div>
+</div>
+
+<div class="contents"><!-- D --></div>
+*/
+
+.ancestor .contents {
+    /* Some declarations */
+}
+
+/* Color and background-color */
+/* red and transparent are common keywords. */
+p {
+    /* hex example: */
+    color: #1100ff;
+  }
+  
+  p {
+    /* rgb example: */
+    color: rgb(100, 0, 127);
+  }
+  
+  p {
+    /* hsl example: */
+    color: hsl(15, 82%, 56%);
+  }
+  
+  /* https://www.w3schools.com/cssref/css_colors_legal.php */
+  /* alpha - determines opacity */
+
+  /* Typography  */
+  /* font weight, number between 1 and 1000 or keyword */
+  /* text-align, align text horizontally within element */
+
+  /* Image height and width */
+  /* auto: proportionally size image without losing proportions */
+  
+
+  /* External CSS */
+  div {
+    color: white;
+    background-color: black;
+  }
+  
+  p {
+    color: red;
+  }
+
+  /* Internal CSS */
+  
