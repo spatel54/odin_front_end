@@ -121,49 +121,54 @@ div {
 */
 
 .ancestor .contents {
-    /* Some declarations */
+  /* Some declarations */
 }
 
 /* Color and background-color */
 /* red and transparent are common keywords. */
 p {
-    /* hex example: */
-    color: #1100ff;
-  }
-  
-  p {
-    /* rgb example: */
-    color: rgb(100, 0, 127);
-  }
-  
-  p {
-    /* hsl example: */
-    color: hsl(15, 82%, 56%);
-  }
-  
-  /* https://www.w3schools.com/cssref/css_colors_legal.php */
-  /* alpha - determines opacity */
+  /* hex example: */
+  color: #1100ff;
+}
 
-  /* Typography  */
-  /* font weight, number between 1 and 1000 or keyword */
-  /* text-align, align text horizontally within element */
+p {
+  /* rgb example: */
+  color: rgb(100, 0, 127);
+}
 
-  /* Image height and width */
-  /* auto: proportionally size image without losing proportions */
-  
+p {
+  /* hsl example: */
+  color: hsl(15, 82%, 56%);
+}
 
-  /* External CSS */
-  div {
-    color: white;
-    background-color: black;
-  }
-  
-  p {
-    color: red;
-  }
+/* https://www.w3schools.com/cssref/css_colors_legal.php */
+/* alpha - determines opacity */
 
-  /* Internal CSS */
-  /* <head>
+/* Typography  */
+/* font weight, number between 1 and 1000 or keyword */
+/* text-align, align text horizontally within element */
+
+/* Image height and width */
+/* auto: proportionally size image without losing proportions */
+
+/* External CSS */
+/* <!-- index.html -->
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head> */
+
+div {
+  color: white;
+  background-color: black;
+}
+
+p {
+  color: red;
+}
+
+/* Internal CSS */
+/* <head>
   <style>
     div {
       color: white;
@@ -183,4 +188,3 @@ p {
 /* <body>
   <div style="color: white; background-color: black;">...</div>
 </body> */
-
