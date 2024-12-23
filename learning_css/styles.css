@@ -163,4 +163,24 @@ p {
   }
 
   /* Internal CSS */
-  
+  /* <head>
+  <style>
+    div {
+      color: white;
+      background-color: black;
+    }
+
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  ...
+</body> */
+
+/* Inline CSS */
+/* <body>
+  <div style="color: white; background-color: black;">...</div>
+</body> */
+
