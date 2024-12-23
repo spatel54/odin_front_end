@@ -1,0 +1,131 @@
+/* ID > class > type selector */
+
+/* <!-- index.html -->
+
+<div class="main">
+  <div class="list subsection">Red text</div>
+</div> */
+
+/* rule 1 */
+.subsection {
+    color: blue;
+  }
+  
+  /* rule 2 */
+  .main .list {
+    color: red;
+  }
+  
+/* Rule 2 takes precedence because there is more specificity. */
+
+
+
+/* Another example */
+
+/* <!-- index.html -->
+
+<div class="main">
+  <div class="list" id="subsection">Blue text</div>
+</div>
+ */
+
+/* rule 1 */
+#subsection {
+    color: blue;
+  }
+  
+  /* rule 2 */
+  .main .list {
+    color: red;
+  }
+  
+/* ID beats .main .list because ID is more specific than class */
+
+/* More complex example */
+
+/* <!-- index.html -->
+
+<div class="main">
+  <div class="list" id="subsection">Red text on yellow background</div>
+</div> */
+
+/* rule 1 */
+#subsection {
+    background-color: yellow;
+    color: blue;
+  }
+  
+  /* rule 2 */
+  .main #subsection {
+   color: red;
+  }
+
+/* Despite both having the ID subsection, because rule two has a class selector and an ID type, 
+there are more of each type of selector type, so rule 2 wins.*/
+
+/* Chaining selector and descendant combinators are the same in terms of specificity. */
+
+
+/* Example */
+/* rule 1 */
+.class.second-class {
+    font-size: 12px;
+  }
+  
+  /* rule 2 child combinator */
+  .class > .second-class {
+    font-size: 24px;
+  }
+
+/* Here, there are both classes, so there is no higher degree of specificity. */
+
+
+/* Example 2 */
+
+/* rule 1 */
+* {
+    color: black;
+  }
+  
+  /* rule 2 */
+  h1 {
+    color: orange;
+  }
+  
+/* Here, rule 2 takes precedence because h1 is a type selector and * is a universal selector so
+it has no specificity. */
+
+/* Inheritance */
+/* When a CSS property is applied to an element, it gets inherited by elements descendants unless
+there is a selector type directly applied to an element.  */
+/* 
+<!-- index.html -->
+
+<div id="parent">
+  <div class="child"></div>
+</div> */
+
+/* styles.css */
+
+#parent {
+    color: red;
+  }
+  
+  .child {
+    color: blue;
+  }
+  
+/* Rule order */
+/* After everything has been checked, whichever rule was defined last takes precedence. */
+
+/* styles.css */
+
+.alert {
+    color: red;
+  }
+  
+  .warning {
+    color: yellow;
+  }
+  
+

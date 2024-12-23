@@ -1,0 +1,39 @@
+.h3 {
+    background-color: hsl(100, 50%, 80);
+    color: black;
+    text-align: center;
+    font-size: larger;
+    font-family: Impact, "Arial Bold", sans-serif;
+}
+
+.one, .two {
+    background-color: lightcoral;
+    color: white;
+    font-size: medium;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#four {
+    font-size: medium;
+    font-weight: bold;
+}
+
+#image {
+    display: flex;
+    justify-self: center;
+}
+
+.unordered-list .text  {
+    color: blue;
+    text-decoration: underline;
+}
+
+.unordered-list #specific {
+    color: green;
+    font-size: large;
+}
+
+.link-decoration {
+    color: gold;
+    text-shadow: 0cap;
+}
