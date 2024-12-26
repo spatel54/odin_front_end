@@ -1,0 +1,58 @@
+/* padding increases the space between the border of a box and the content of the box.
+ */
+
+ /* border adds space (even if it’s only a pixel or two) between the margin and the padding.
+ */
+
+ /* margin increases the space between the borders of a box and the borders of adjacent boxes.
+ */
+
+ /* box-sizing accounts subtracts padding, border, reflects true height and width. Actual content is shrunk because 
+ border and padding cuts into it.*/
+
+ /* box-sizing and content-box */
+
+
+ /* Margin Collapsing */
+
+ /* Two positive margins will combine to become one margin. Its size will be equal to the largest individual margin.
+
+ Two negative margins will collapse and the smallest (furthest from zero) value will be used.
+
+ If one margin is negative, its value will be subtracted from the total. */
+
+
+/* Margin collapsing occurs in three basic cases:
+
+Adjacent siblings
+The margins of adjacent siblings are collapsed (except when the latter sibling needs to be cleared past floats).
+
+No content separating parent and descendants
+If there is no border, padding, inline part, block formatting context created, or clearance to separate the margin-top of a block from the margin-top of one or more of its descendant blocks; or no border, padding, inline content, height, or min-height to separate the margin-bottom of a block from the margin-bottom of one or more of its descendant blocks, then those margins collapse. The collapsed margin ends up outside the parent.
+
+Empty blocks
+If there is no border, padding, inline content, height, or min-height to separate a block's margin-top from its margin-bottom, then its top and bottom margins collapse.
+
+Some things to note:
+
+More complex margin collapsing (of more than two margins) occurs when the above cases are combined.
+These rules apply even to margins that are zero, so the margin of a descendant ends up outside its parent (according to the rules above) whether or not the parent's margin is zero.
+When negative margins are involved, the size of the collapsed margin is the sum of the largest positive margin and the smallest (most negative) negative margin.
+When all margins are negative, the size of the collapsed margin is the smallest (most negative) margin. This applies to both adjacent elements and nested elements.
+Collapsing margins is only relevant in the vertical direction.
+Margins don't collapse in a container with display set to flex or grid. */
+
+
+/* Display in-line block */
+/* An element with display: inline-block does a subset of the block things we already know about:
+
+The width and height properties are respected.
+padding, margin, and border will cause other elements to be pushed away from the box.
+ */
+
+ /* .box {
+    margin: <margin-top> || <margin-right> || <margin-bottom> || <margin-left>
+}</margin-left></margin-bottom></margin-right></margin-top> */
+
+/* It should also be pointed out that auto is useful only for horizontal centering, and so using auto for top and bottom margins will not center an element vertically, which can be confusing for beginners.
+ */
