@@ -1,0 +1,22 @@
+/* display: block is default setting. It appears on a page stacked on top of each other, 
+each element starting on a new line.
+
+Inline elements appear in the line they are placed. Ex: <a>, becomes part of paragraph,
+should not add padding or margins.
+
+Div is block-level element used to group elements under one container to apply styles 
+and easily position them on the page. 
+
+Span in in-line element. 
+
+Can have float and position values. Float causes text to wrap around an element like images
+in an a magazine.
+* left, right, top, bottom, inline-start, inline-end
+
+Position controls the placement of boxes inside other boxes. 
+* static, sticky, relative, absolute
+Relative - moves according to default position on page
+Absolute - moves according to nearest ancestor
+
+Display inline-block: width and height are respected while elements are side by side.
+*/
