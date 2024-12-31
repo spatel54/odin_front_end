@@ -1,0 +1,140 @@
+/* display: flex */
+/* Flexbox allows control over size, order, placement, and alignment. */
+/* Direct child is called item. Helps containers know their position. */
+
+/* align-items: 
+center
+flex-start   (top)
+flex-end      (bottom)
+stretch
+baseline */
+
+/* justify-content:
+center
+flex-start
+flex-end
+space-around
+space-between */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .login {
+    margin-left: 20px;
+  }
+
+  .signup {
+    margin-left: auto;
+  }
+    
+  .menu-container {
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center; /* same as margin: 0 auto */
+  }
+  
+  .menu {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .signup {
+    margin-left: auto;
+  }
+
+  /* Auto-margins eat up all the extra space in a flex container, so instead of distributing items equally, 
+  this moves the .signup and any following items (.login) to the 
+  right side of the container. */
+
+  .header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Add this */
+  }
+  
+  .social, .subscribe {
+  align-self: flex-end;
+  /* align-self: 
+  center
+flex-start   (top)
+flex-end      (bottom)
+stretch (stretches to same height)
+baseline (all text on same line from different childs) */
+  margin-bottom: 20px;
+}
+
+
+  .photo-grid-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    /* justify items only used for grid-items, not flex. */
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* Can change to reverse-row or reverse-column */
+    align-items: center;
+    /* align-content is used for multiple rows  */
+  }
+  
+  .photo-grid-item {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
+  }
+
+
+  /* Reverse order */
+  .first-item {
+    order: 1;
+  }
+  
+  .last-item {
+    order: -1;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1;
+    /* Tells items to stretch to match footer. */
+  }
+
+  .footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial; 
+  /* Makes footer one and three fixed. */
+  width: 300px;
+}
+  
