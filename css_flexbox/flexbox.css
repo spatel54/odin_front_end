@@ -16,6 +16,14 @@ flex-end
 space-around
 space-between */
 
+/* flex-shrink: only is applied if child divs are larger than parent container 
+When flex-shrink or flex grow is specified, width values are not respected. 
+If parent big enough, they grow to fill in. If small, they shrink to fit. 
+
+flex-basis: sets initial size of element
+flex-basis: auto makes sure that the items do not shrink evenly. 0 makes it shrink evenly. 
+Auto tells item to check for width declaration*/
+
 * {
     margin: 0;
     padding: 0;
@@ -128,6 +136,7 @@ baseline (all text on same line from different childs) */
     height: 200px;
     flex: 1;
     /* Tells items to stretch to match footer. */
+    /* Substitution for flex-grow: 1, flex-shrink: 1, flex-basis:0 */
   }
 
   .footer-one,
@@ -138,3 +147,4 @@ baseline (all text on same line from different childs) */
   width: 300px;
 }
   
+
